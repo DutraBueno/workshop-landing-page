@@ -73,7 +73,7 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
   );
 }
 
-const REGISTRATION_URL = "https://loja.infinitepay.io//daniel_dutra_bueno/avj5878-workshop-vivendo-de-audiovisual";
+const REGISTRATION_URL = "https://loja.infinitepay.io//vivendodeaudiovisual/avj5878-workshop-vivendo-de-audiovisual";
 
 function Index() {
   const { d, h, m, s } = useCountdown(EVENT_DATE);
