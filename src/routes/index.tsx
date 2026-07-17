@@ -7,7 +7,6 @@ import {
 import {
   Accordion, AccordionContent, AccordionItem, AccordionTrigger,
 } from "@/components/ui/accordion";
-import { CheckoutModal } from "@/components/checkout/CheckoutModal";
 import { Logo } from "@/components/Logo";
 import heroImg from "@/assets/hero.jpg";
 import instructorImg from "@/assets/instructor.jpg";
@@ -74,9 +73,14 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
   );
 }
 
+const REGISTRATION_URL = "https://loja.infinitepay.io//daniel_dutra_bueno/avj5878-workshop-vivendo-de-audiovisual";
+
 function Index() {
   const { d, h, m, s } = useCountdown(EVENT_DATE);
-  const [checkoutOpen, setCheckoutOpen] = useState(false);
+
+  const handleRegistrationRedirect = () => {
+    window.open(REGISTRATION_URL, "_blank", "noopener,noreferrer");
+  };
 
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
@@ -89,7 +93,7 @@ function Index() {
             <span>12 SET · Sobradinho/DF</span>
           </div>
           <button
-            onClick={() => setCheckoutOpen(true)}
+            onClick={handleRegistrationRedirect}
             className="hidden sm:inline-flex items-center rounded-full bg-gradient-gold px-4 py-2 text-xs font-semibold uppercase tracking-wider text-primary-foreground cursor-pointer hover:scale-[1.02] transition-transform"
           >
             Garantir vaga
@@ -138,7 +142,7 @@ function Index() {
             </ul>
 
             <div className="mt-10 flex flex-col sm:flex-row gap-4">
-              <GoldButton onClick={() => setCheckoutOpen(true)} size="lg">
+              <GoldButton onClick={handleRegistrationRedirect} size="lg">
                 Quero garantir minha vaga
               </GoldButton>
               <GoldButton href="#programa" variant="outline" size="lg">
@@ -176,7 +180,7 @@ function Index() {
               </div>
               <div className="mt-6 gold-divider" />
               <button
-                onClick={() => setCheckoutOpen(true)}
+                onClick={handleRegistrationRedirect}
                 className="mt-6 w-full py-3 bg-gold/10 hover:bg-gold/20 text-gold font-bold uppercase tracking-wider text-xs rounded-xl border border-gold/30 cursor-pointer transition-colors"
               >
                 Investimento a partir de 12x R$ 49,97
@@ -426,7 +430,7 @@ function Index() {
               ))}
             </div>
 
-            <GoldButton onClick={() => setCheckoutOpen(true)} size="lg" className="w-full">
+            <GoldButton onClick={handleRegistrationRedirect} size="lg" className="w-full">
               Garantir minha vaga agora
             </GoldButton>
             <p className="mt-4 text-center text-xs text-muted-foreground">
@@ -501,7 +505,7 @@ function Index() {
             <span className="text-sm font-medium">GODigital Business Hub — Sobradinho/DF</span>
           </div>
           <div className="mt-10">
-            <GoldButton onClick={() => setCheckoutOpen(true)} size="lg">
+            <GoldButton onClick={handleRegistrationRedirect} size="lg">
               Inscrever-me no workshop
             </GoldButton>
           </div>
@@ -539,7 +543,7 @@ function Index() {
             </div>
           </div>
           <button
-            onClick={() => setCheckoutOpen(true)}
+            onClick={handleRegistrationRedirect}
             className="inline-flex items-center rounded-full bg-gradient-gold px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-primary-foreground cursor-pointer"
           >
             Quero minha vaga
@@ -547,8 +551,7 @@ function Index() {
         </div>
       </div>
 
-      {/* Interactive Checkout Modal */}
-      <CheckoutModal isOpen={checkoutOpen} onClose={() => setCheckoutOpen(false)} />
+
     </div>
   );
 }
