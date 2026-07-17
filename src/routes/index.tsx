@@ -114,7 +114,7 @@ function Index() {
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 grid lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7 animate-fade-up">
-            <SectionLabel>Workshop Presencial · Edição 2025</SectionLabel>
+            <SectionLabel>Workshop Presencial · Edição 2026</SectionLabel>
             <h1 className="mt-6 font-display text-4xl sm:text-5xl lg:text-7xl font-bold leading-[1.05]">
               Aprenda <span className="text-gradient-gold">Fotografia e Vídeo</span> na Prática em Apenas 1 Dia
             </h1>
