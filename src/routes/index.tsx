@@ -183,7 +183,7 @@ function Index() {
                 onClick={handleRegistrationRedirect}
                 className="mt-6 w-full py-3 bg-gold/10 hover:bg-gold/20 text-gold font-bold uppercase tracking-wider text-xs rounded-xl border border-gold/30 cursor-pointer transition-colors"
               >
-                Investimento a partir de 12x R$ 54,17
+                Investimento a partir de 12x R$ 56,88
               </button>
             </div>
           </div>
@@ -399,16 +399,16 @@ function Index() {
             </div>
 
             <div className="mt-6 text-center">
-              <div className="text-sm text-muted-foreground line-through">de R$ 800,00 por</div>
+              <div className="text-sm text-muted-foreground line-through">de R$ 700,00 por</div>
               <div className="mt-2 flex items-baseline justify-center gap-2">
-                <span className="font-display text-6xl sm:text-7xl font-bold text-gradient-gold">R$ 650</span>
+                <span className="font-display text-6xl sm:text-7xl font-bold text-gradient-gold">R$ 550</span>
                 <span className="text-muted-foreground">,00</span>
               </div>
               <div className="mt-2 text-sm text-gold uppercase tracking-widest font-semibold">
                 10% OFF · Pagamento à vista no PIX
               </div>
               <div className="mt-6 inline-block rounded-full bg-background/60 border border-border px-6 py-2 text-sm">
-                ou <span className="font-bold text-foreground">12x de R$ 54,17</span> sem juros no cartão
+                ou <span className="font-bold text-foreground">12x de R$ 56,88</span> sem juros no cartão
               </div>
             </div>
 
@@ -539,7 +539,7 @@ function Index() {
           <div>
             <div className="text-[10px] uppercase tracking-widest text-muted-foreground">Lote atual</div>
             <div className="text-sm font-bold">
-              <span className="text-gradient-gold">R$ 650</span> <span className="text-muted-foreground font-normal text-xs font-sans">à vista</span>
+              <span className="text-gradient-gold">R$ 550</span> <span className="text-muted-foreground font-normal text-xs font-sans">à vista</span>
             </div>
           </div>
           <button
